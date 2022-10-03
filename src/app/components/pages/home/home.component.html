@@ -1,0 +1,292 @@
+<section class="container flex">
+    <aside>
+        <p><a href="" class="breadcrumb"><span>Voltar pra home /</span></a> Resultado da busca</p>
+
+        <form action="">
+            <div class="flex top">
+                <p>Filtros</p>
+                <p>Limpar tudo</p>
+            </div>
+
+            <div class="filters">
+                <details class="location-filter">
+                    <summary>Localização</summary>
+                    <input type="text" size="100%" placeholder="Digite o estado ou cidade">
+                </details>
+
+                <details class="store">
+                    <summary>Loja para retirada</summary>
+                    <input type="text" size="100%" placeholder="Digite o estado ou cidade">
+
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox">
+                            <label for="">São Paulo - Itaim (15)</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">São Paulo - Congonhas (1)</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Guarulhos</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Osasco</label>
+                        </div>
+
+                    </div>
+                </details>
+
+                <details class="brand">
+                    <summary>Marca do carro</summary>
+                </details>
+
+                <details class="date">
+                    <summary>Prazo de entrega</summary>
+
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Entrega imediata (4)</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Até 20 dias úteis (3)</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Sob encomenda (2)</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Osasco</label>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </form>
+    </aside>
+
+    <main class="flex">
+        <div class="results">
+            <p>Escolha seu veículo</p>
+            <p>Foram encontrados <span>{{ total }} veículos</span></p>
+        </div>
+
+        <div class="flex container-cards">
+            <!-- <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/HB20 Hatch.png">
+
+                    <div class="main">
+                        <p class="title">Hyunday HB20</p>
+                        <p class="sub-title">CONFORT 1.0 FLEX 5P MANUAL</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 899,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 1.099,99 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars//Onix Hatch.png">
+
+                    <div class="main">
+                        <p class="title">Crevolet Onyx</p>
+                        <p class="sub-title">DRIVE 1.0 FLEX SP MANUAL</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 1.089,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 1.299,99 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/Hb20s Evolution.png">
+
+                    <div class="main">
+                        <p class="title">Hyunday HB20</p>
+                        <p class="sub-title">1.6 16V FLEX 4P AUTOMATICO</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 1.289,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 1.099,99 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/ka.png">
+
+                    <div class="main">
+                        <p class="title">Ford Ka</p>
+                        <p class="sub-title">DRIVE 1.0 FLEX MANUAL</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 1.389,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 1.799,99 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/Ecosport SE.png">
+
+                    <div class="main">
+                        <p class="title">Ford Ecosport</p>
+                        <p class="sub-title">2.0 4x2 FLEX 16V MANUAL</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 1.599,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 1.999,99 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/polo.png">
+
+                    <div class="main">
+                        <p class="title">Volkswagen Polo</p>
+                        <p class="sub-title">ZEN 1.0 FLEX 12V 5P MANUAL</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 1.899,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 2.299,99 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/strada.png">
+
+                    <div class="main">
+                        <p class="title">Fiat Strada</p>
+                        <p class="sub-title">1.8 GLI 16V FLEX 4P AUTOMATICO</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 2.500,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 2.900,00 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/toro.png">
+
+                    <div class="main">
+                        <p class="title">Fiat Toro</p>
+                        <p class="sub-title">1.6 FLEX EXCLUSIVE TRONIC</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 2.799,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 3.199,00 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="/assets/img/cars/kicks.png">
+
+                    <div class="main">
+                        <p class="title">Nissan Kicks</p>
+                        <p class="sub-title">1.8 16V FLEX 49 AUTOMATICO</p>
+                    </div>
+
+                    <div class="plan">
+                        <p>Plano 24 meses</p>
+                        <p>Franquia 1.000 km</p>
+                    </div>
+
+                    <div class="price">
+                        <small>A partir de </small>
+                        <p>R$ 2.999,00 <span>/ mês*</span></p>
+                        <p>*Nos 3 primeiros meses e R$ 3.599,99 do 4 ao 24 mês</p>
+                    </div>
+
+                    <button>Eu quero</button>
+                </a>
+            </div> -->
+
+        </div>
+
+
+    </main>
+</section>

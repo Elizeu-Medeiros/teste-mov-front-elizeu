@@ -1,0 +1,413 @@
+/* You can add global styles to this file, and also import other style files */
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* GENERAL */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1080px;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+.bg-primary {
+    background: #F97D00;
+}
+
+/* HEADER */
+
+.tabs {
+    background: #FFF;
+}
+
+.tabs ul li {
+    padding: 10px 40px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    box-shadow: 0px 3px 6px #00000014;
+}
+
+.tabs ul .rent {
+    background: #F97D0080;
+    opacity: 0.8;
+}
+
+.tabs ul .fleets {
+    background: #32323280;
+    opacity: 0.8;
+}
+
+.tabs ul .pre-owned {
+    background: #C9B6D0;
+    opacity: 0.8;
+}
+
+.tabs ul .zero-km {
+    background: #F97D00;
+}
+
+.tabs ul li a {
+    color: #FFF;
+}
+
+header .nav {
+    justify-content: space-between;
+    padding: 20px 5px;
+    font-size: 14px;
+}
+
+.nav a:not(.login) {
+    margin-right: 30px;
+}
+
+.container .location {
+    padding: 4px 0 4px 28px;
+    background: url('img/icons/location.svg') no-repeat center left;
+    color: #FFF;
+}
+
+.container .location::after {
+    content: "│";
+    margin-left: 30px;
+    cursor: auto;
+}
+
+.container .login {
+    padding: 4px 0 4px 35px;
+    background: url('img/icons/user.svg') no-repeat center left;
+    color: #FFF;
+}
+
+
+/* MAIN */
+
+section.container {
+    margin-top: 26px;
+    align-items: flex-start;
+}
+
+aside {
+    width: 30%;
+}
+
+aside p {
+    font-size: 15px;
+    color: #999999;
+}
+
+aside .breadcrumb {
+    font-size: 15px;
+    color: #F97D00;
+}
+
+form {
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px #00000014;
+    color: #58595B;
+}
+
+form .top {
+    justify-content: space-between;
+    margin: 26px 0 30px 0;
+    padding: 8px 16px;
+    background: #F2F2F2;
+    border-radius: 5px 5px 0 0;
+}
+
+form p:first-child {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1D1C19;
+}
+
+form p+p {
+    font-size: 12px;
+    font-weight: 700;
+    color: #F97D00;
+    text-decoration: underline;
+}
+
+form .filters {
+    padding: 0 16px 24px;
+}
+
+form .filters details {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+form .filters details summary {
+    margin-bottom: 20px;
+    padding: 4px 0 4px 28px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1D1C19;
+}
+
+form .filters .location-filter summary {
+    background: url('img/icons/location_orange.svg') no-repeat center left;
+}
+
+form .filters .store summary {
+    background: url('img/icons/store.svg') no-repeat center left;
+}
+
+form .filters .brand summary {
+    background: url('img/icons/brand.svg') no-repeat center left;
+}
+
+form .filters .date summary {
+    background: url('img/icons/date.svg') no-repeat center left;
+}
+
+
+form .filters details summary:after {
+    content: "+";
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    text-align: center;
+    float: right;
+    color: #F97D00;
+}
+
+form .filters details[open] summary:after {
+    content: "";
+    background: url('img/icons/arrow-up.svg') no-repeat center left;
+    width: 20px;
+    height: 20px;
+}
+
+form input[type="text"] {
+    max-width: 100%;
+    margin-bottom: 24px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #DCDCDC;
+}
+
+form input[type="checkbox"] {
+    accent-color: #F97D00;
+    color: #FFF;
+}
+
+form .checkbox-group {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #DCDCDC;
+    margin-bottom: 24px;
+}
+
+form label {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+main {
+    box-sizing: border-box;
+    width: 70%;
+    margin-top: 40px;
+    margin-left: 25px;
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+
+main .results p:first-child {
+    margin-bottom: 14px;
+    font-size: 22px;
+    color: #58595B;
+}
+
+main p+p {
+    font-size: 14px;
+    color: #58595B;
+}
+
+main p span {
+    font-weight: 700;
+}
+
+main .container-cards {
+    flex-wrap: wrap;
+}
+
+main .card {
+    width: 230px;
+    margin-right: 10px;
+    margin-top: 30px;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+main .card:hover {
+    box-shadow: 0px 3px 6px #00000029;
+    transition: 0.5s;
+}
+
+main .card a {
+    color: #58595B;
+}
+
+main .card .title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #58595B;
+}
+
+main .card .sub-title {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+main .card .plan {
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+main .card .price {
+    font-weight: 400;
+}
+
+main .card .price p {
+    margin-top: 4px;
+    font-weight: 700;
+    color: #F97D00;
+}
+
+main .card .price span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+main .card .price p+p {
+    font-weight: 400;
+    font-size: 12px;
+    color: #58595B;
+}
+
+main .card button {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+main .card:hover button {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    background: #F97D00;
+    color: #FFF;
+    visibility: visible;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 135px;
+    background: #F4F4F4;
+    font-size: 14px;
+}
+
+footer .top {
+    align-items: flex-start;
+    padding-top: 57px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #999;
+    color: #999;
+}
+
+footer .top img {
+    margin-right: 28px;
+}
+
+footer .item strong {
+    font-size: 15px;
+    color: #F97D00;
+}
+
+footer .item {
+    margin-top: 30px;
+}
+
+footer .item .sites {
+    margin-top: -40px;
+}
+
+footer .item .sites li:not(:last-child) {
+    margin-right: 30px;
+}
+
+footer .item:last-child .flex {
+    justify-content: space-between;
+}
+
+.main ul li a {
+    margin-right: 10px;
+    color: #999999;
+}
+
+.main ul li a::after {
+    margin-left: 10px;
+    content: "│";
+}
+
+footer .infos {
+    padding: 28px 0;
+    margin-top: 10px;
+    border-top: 1px solid #999;
+}
+
+footer .infos ul li:not(:last-child) {
+    margin-right: 60px;
+}
+
+footer .bottom {
+    padding: 5px 0;
+    color: #FFF;
+}
+
+footer .bottom .container {
+    justify-content: space-between;
+}
+
+footer .bottom .container p+p {
+    padding: 4px 0 4px 50px;
+    background: url('img/ibama.png') no-repeat center left;
+}
+
+footer .social li a img {
+    margin-right: 20px;
+}
