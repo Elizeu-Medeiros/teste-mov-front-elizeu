@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Cars } from 'src/app/Cars';
 import { CarsService } from 'src/app/services/cars.service';
+import { Brands } from 'src/app/Brands';
+import { BrandsService } from 'src/app/services/brands.service';
 import { environment } from 'src/environments/environment';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,12 +15,14 @@ export class HomeComponent implements OnInit {
   items: any;
   cars: Cars[] = [];
   allCars: Cars[] = [];
+  brands: Brands[] = [];
+  allBrands: Brands[] = [];
   baseApiUrl = environment.baseApiUrl;
 
   searchTerm: string = '';
-  // faSearch = faSearch;
+  faSearch = faSearch;
 
-  constructor(private carsService: CarsService) { }
+  constructor(private carsService: CarsService, private brandsService: BrandsService) { }
 
   ngOnInit(): void {
     this.carsService.getCars().subscribe((itens) => {
@@ -35,15 +39,47 @@ export class HomeComponent implements OnInit {
       this.cars = data;
       this.items = itens;
     });
+
+    this.brandsService.getBrands().subscribe((itens) => {
+      const data = itens.data;
+      const items = itens;
+
+      data.map((item: { created_at: string | number | Date; }) => {
+        item.created_at = new Date(item.created_at!).toLocaleDateString(
+          'pt-BR'
+        );
+      });
+
+      this.allBrands = data;
+      this.brands = data;
+      this.items = itens;
+    });
   }
 
-  // search(e: Event): void {
-  //   const target = e.target as HTMLInputElement;
-  //   const value = target.value;
+  searchCity(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
 
-  //   this.moments = this.allMoments.filter((moment) =>
-  //     moment.title.toLowerCase().includes(value)
-  //   );
-  // }
+    this.cars = this.allCars.filter((car) =>
+      car.city.toLowerCase().includes(value)
+    );
+  }
 
+  searchStore(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.cars = this.allCars.filter((car) =>
+      car.store_withdrawn.toLowerCase().includes(value)
+    );
+  }
+
+  searchDate(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.cars = this.allCars.filter((car) =>
+      car.deadline.toLowerCase().includes(value)
+    );
+  }
 }

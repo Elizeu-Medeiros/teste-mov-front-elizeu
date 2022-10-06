@@ -11,13 +11,14 @@
             <div class="filters">
                 <details class="location-filter">
                     <summary>Localização</summary>
-                    <input type="text" size="100%" placeholder="Digite o estado ou cidade">
+                    <input type="text" size="100%" placeholder="Digite o estado ou cidade"
+                        (input)="searchCity($event)" />
                 </details>
 
                 <details class="store">
                     <summary>Loja para retirada</summary>
-                    <input type="text" size="100%" placeholder="Digite o estado ou cidade">
-
+                    <input type="text" size="100%" placeholder="Digite o estado ou cidade"
+                        (input)="searchStore($event)" />
                     <div class="checkbox-group">
                         <div>
                             <input type="checkbox">
@@ -41,27 +42,21 @@
 
                 <details class="brand">
                     <summary>Marca do carro</summary>
+                    <div *ngFor="let brand of brands" class="col-4 brand-group">
+
+
+                        <img src="/assets/img/brands/{{brand.image}}" alt="{{brand.title}}"><label for="">(4)</label>
+
+                    </div>
                 </details>
 
                 <details class="date">
                     <summary>Prazo de entrega</summary>
 
-                    <div class="checkbox-group">
+                    <div *ngFor="let car of cars" class="checkbox-group">
                         <div>
                             <input type="checkbox">
-                            <label for="">Entrega imediata (4)</label>
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <label for="">Até 20 dias úteis (3)</label>
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <label for="">Sob encomenda (2)</label>
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <label for="">Osasco</label>
+                            <label for="">{{car.deadline}} ()</label>
                         </div>
 
                     </div>
@@ -78,7 +73,7 @@
         <div class="flex container-cards">
             <div *ngFor="let car of cars" class="card">
                 <a href="">
-                    <img src="{{car.image}}">
+                    <img src="/assets/img/cars/{{car.image}}">
 
                     <div class="main">
                         <p class="title">{{car.title}}</p>

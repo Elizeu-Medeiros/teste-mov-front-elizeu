@@ -231,6 +231,15 @@ form label {
     margin-left: 10px;
 }
 
+form .brand-group {
+    top: 705px;
+    left: 156px;
+    width: 67px;
+    height: 67px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
 main {
     box-sizing: border-box;
     width: 70%;
