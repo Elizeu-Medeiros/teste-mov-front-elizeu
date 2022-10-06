@@ -89,7 +89,7 @@ header .nav {
 
 .container .location {
     padding: 4px 0 4px 28px;
-    background: url('img/icons/location.svg') no-repeat center left;
+    background: url('/assets/img/icons/location.svg') no-repeat center left;
     color: #FFF;
 }
 
@@ -101,7 +101,7 @@ header .nav {
 
 .container .login {
     padding: 4px 0 4px 35px;
-    background: url('img/icons/user.svg') no-repeat center left;
+    background: url('/assets/img/icons/user.svg') no-repeat center left;
     color: #FFF;
 }
 
@@ -172,19 +172,19 @@ form .filters details summary {
 }
 
 form .filters .location-filter summary {
-    background: url('img/icons/location_orange.svg') no-repeat center left;
+    background: url('/assets/img/icons/location_orange.svg') no-repeat center left;
 }
 
 form .filters .store summary {
-    background: url('img/icons/store.svg') no-repeat center left;
+    background: url('/assets/img/icons/store.svg') no-repeat center left;
 }
 
 form .filters .brand summary {
-    background: url('img/icons/brand.svg') no-repeat center left;
+    background: url('/assets/img/icons/brand.svg') no-repeat center left;
 }
 
 form .filters .date summary {
-    background: url('img/icons/date.svg') no-repeat center left;
+    background: url('/assets/img/icons/date.svg') no-repeat center left;
 }
 
 
@@ -201,7 +201,7 @@ form .filters details summary:after {
 
 form .filters details[open] summary:after {
     content: "";
-    background: url('img/icons/arrow-up.svg') no-repeat center left;
+    background: url('/assets/img/icons/arrow-up.svg') no-repeat center left;
     width: 20px;
     height: 20px;
 }
@@ -229,6 +229,15 @@ form .checkbox-group {
 form label {
     font-size: 14px;
     margin-left: 10px;
+}
+
+form .brand-group {
+    top: 705px;
+    left: 156px;
+    width: 67px;
+    height: 67px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 
 main {
@@ -405,7 +414,7 @@ footer .bottom .container {
 
 footer .bottom .container p+p {
     padding: 4px 0 4px 50px;
-    background: url('img/ibama.png') no-repeat center left;
+    background: url('/assets/img/ibama.png') no-repeat center left;
 }
 
 footer .social li a img {
