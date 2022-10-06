@@ -226,18 +226,45 @@ form .checkbox-group {
     margin-bottom: 24px;
 }
 
+form .brand-group .wrapper-brand {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #DCDCDC;
+    text-align: center;
+}
+
 form label {
     font-size: 14px;
     margin-left: 10px;
 }
 
 form .brand-group {
-    top: 705px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 24px;
+    /* top: 705px;
     left: 156px;
     width: 67px;
     height: 67px;
     /* UI Properties */
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    /* background: #FFFFFF 0% 0% no-repeat padding-box; */
+
+}
+
+form .wrapper-brand label {
+    font-size: 13px;
+    margin-left: 0;
+    color: #999999;
+}
+
+form .wrapper-brand .brand-name {
+    margin: 4px 0 2px;
+    font-size: 14px;
+    color: #58595B;
 }
 
 main {
